@@ -34,7 +34,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function name(string $nameOrInitials): self
+    public function name(string $nameOrInitials)
     {
         $this->parameter_name = $nameOrInitials;
         $this->parameter_initials = $this->generateInitials();
@@ -49,7 +49,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function length(int $length = 2): self
+    public function length(int $length = 2)
     {
         $this->parameter_length = (int) $length;
         $this->parameter_initials = $this->generateInitials();
@@ -64,7 +64,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function size(int $size): self
+    public function size(int $size)
     {
         $this->parameter_size = (int) $size;
 
@@ -78,7 +78,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function background(string $background): self
+    public function background(string $background)
     {
         $this->parameter_bgColor = (string) $background;
 
@@ -92,7 +92,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function color(string $color): self
+    public function color(string $color)
     {
         $this->parameter_fontColor = (string) $color;
 
@@ -106,7 +106,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function font(string $font): self
+    public function font(string $font)
     {
         $this->parameter_fontFile = (string) $font;
 
@@ -121,7 +121,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function cache(int $minutes = 60): self
+    public function cache(int $minutes = 60)
     {
         $this->parameter_cacheTime = (int) $minutes;
 
@@ -135,7 +135,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function rounded(bool $rounded = true): self
+    public function rounded(bool $rounded = true)
     {
         $this->parameter_rounded = (bool) $rounded;
 
@@ -150,7 +150,7 @@ class InitialAvatar
      *
      * @return InitialAvatar
      */
-    public function fontSize(float $size = 0.5): self
+    public function fontSize(float $size = 0.5)
     {
         $this->parameter_fontSize = number_format($size, 2);
 
@@ -164,7 +164,7 @@ class InitialAvatar
      *
      * @return Image
      */
-    public function generate($name = null): Image
+    public function generate($name = null)
     {
         if ($name !== null) {
             $this->parameter_name = $name;
@@ -187,7 +187,7 @@ class InitialAvatar
      *
      * @return string
      */
-    public function getInitials(): string
+    public function getInitials()
     {
         return $this->parameter_initials;
     }
@@ -197,7 +197,7 @@ class InitialAvatar
      *
      * @return string
      */
-    public function getParameterBackgroundColor(): string
+    public function getParameterBackgroundColor()
     {
         return $this->parameter_bgColor;
     }
@@ -207,7 +207,7 @@ class InitialAvatar
      *
      * @return string
      */
-    public function getParameterColor(): string
+    public function getParameterColor()
     {
         return $this->parameter_fontColor;
     }
@@ -217,7 +217,7 @@ class InitialAvatar
      *
      * @return float
      */
-    public function getParameterFontSize(): float
+    public function getParameterFontSize()
     {
         return $this->parameter_fontSize;
     }
@@ -227,7 +227,7 @@ class InitialAvatar
      *
      * @return string
      */
-    public function getParameterFontFile(): string
+    public function getParameterFontFile()
     {
         return $this->parameter_fontFile;
     }
@@ -237,7 +237,7 @@ class InitialAvatar
      *
      * @return bool
      */
-    public function getParameterRounded(): bool
+    public function getParameterRounded()
     {
         return $this->parameter_rounded;
     }
@@ -247,7 +247,7 @@ class InitialAvatar
      *
      * @return int
      */
-    public function getParameterSize(): int
+    public function getParameterSize()
     {
         return $this->parameter_size;
     }
@@ -260,7 +260,7 @@ class InitialAvatar
      *
      * @return string
      */
-    private function generateInitials(): string
+    private function generateInitials()
     {
         $nameOrInitials = mb_strtoupper(trim($this->parameter_name));
         $names = explode(' ', $nameOrInitials);
