@@ -1,6 +1,6 @@
 {
-	"name": "lasserafn/php-initial-avatar-generator",
-	"description": "A package to generate avatars with initials for PHP",
+	"name": "lasserafn/php56-initial-avatar-generator",
+	"description": "A package to generate avatars with initials for PHP56",
 	"keywords": [
 		"initials",
 		"image",
@@ -10,12 +10,12 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Lasse Rafn",
-			"email": "lasserafn@gmail.com"
+			"name": "Sylvain BRISSY",
+			"email": "sylvain.brissy@gmail.com"
 		}
 	],
 	"require": {
-		"php": "^7.0|^7.1",
+		"php": "^5.6",
 		"intervention/image": "^2.3",
 		"intervention/imagecache": "^2.3"
 	},
