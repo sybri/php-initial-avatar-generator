@@ -1,5 +1,5 @@
 {
-	"name": "lasserafn/php56-initial-avatar-generator",
+	"name": "sybri/php56-initial-avatar-generator",
 	"description": "A package to generate avatars with initials for PHP56",
 	"keywords": [
 		"initials",
